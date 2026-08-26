@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UltraEdit Website Navbar Using Grid</title>
+
+    <style>
+        header {
+            padding-top: 5px;
+        }
+
+ 
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .logo img {
+            width: 164px;
+        }
+        nav {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            align-items: center;
+            padding-top: 0px;
+            padding-left: 45px;
+            padding-right: 45px;
+            padding-bottom: 40px;
+        
+        }
+
+        .things ul {
+            display: grid;
+            grid-template-columns: repeat(9, auto);
+            gap: 34px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .things ul li {
+            list-style: none;
+        }
+
+        .download {
+            background-color: #ffd43b;
+            padding: 4px 30px;
+            border-radius: 4px;
+            height: 25px;
+            width: 45px; 
+            position: relative;
+            top: -4px;
+
+            display: grid;
+            align-content: center;
+            justify-content: center;
+            margin-left: 150px;
+        }
+
+        .english {
+            /* display: grid;
+            grid-template-columns: auto auto;
+            align-items: center;
+            gap: 18px; */
+        }
+
+        .search {
+            font-size: 25px;
+        }
+
+        .hero {
+            max-width: 650px;
+            margin: 70px;
+            display: grid;
+            gap: 20px;
+        }
+
+        .hero h1 {
+            font-size: 64px;
+            color: #222;
+            margin: 0;
+        }
+
+        .hero p {
+            font-size: 23px;
+            line-height: 1.4;
+            color: #222;
+            margin: 0;
+        }
+
+
+        .buttons {
+            display: grid;
+            grid-template-columns: auto auto;
+            gap: 25px;
+            justify-content: start;
+        }
+
+        .buttons button {
+            border: none;
+            padding: 15px 30px;
+            font-size: 18px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .try {
+            background-color: #ffd43b;
+        }
+
+        .plan {
+            background-color: #f1f0ee;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+
+            <div class="logo">
+                <img src="https://www.ultraedit.com/wp-content/uploads/2023/01/UE-logo.svg" alt="">
+            </div>
+
+            <div class="things">
+                <ul>
+                    <li> Products ⌄  </li>
+                    <li> Buy ⌄   </li>
+                    <li> Renew ⌄   </li>
+                    <li> Support ⌄   </li>
+                    <li> Learn ⌄ </li>
+                    <li> Company ⌄  </li>
+                    <li> <div class="download"> Download </div> </li>
+                    <li> <div class="english"> 🌐 English </div> </li>
+                    <li> <div class="search"> ⌕ </div> </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+
+    <div class="hero">
+
+        <h1>
+            Text editor for your<br>
+            most critical work.
+        </h1>
+
+        <p>
+            Data professionals and IT teams choose UltraEdit for stronger
+            security standards, unmatched performance with large files, and fast
+            dedicated support when issues arise.
+        </p>
+
+        <div class="buttons">
+            <button class="try">
+                Try UltraEdit free
+            </button>
+
+            <button class="plan">
+                View plans
+            </button>
+        </div>
+
+    </div>
+</body>
+</html>

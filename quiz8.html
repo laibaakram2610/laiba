@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bouncing Ball</title>
+
+    <style>
+        
+        .container {
+            position: relative;
+            height: 80vh;
+            width: 1200px;
+            background-color: rgb(98, 98, 137);
+        } 
+
+        .box {
+            height: 121px;
+            width: 121px;
+            background-color: rgb(84, 24, 24);
+            border-radius: 70px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+
+            animation: bounce 5s linear forwards;
+        }
+
+        @keyframes bounce {
+
+            0% {
+                left: 0;
+                bottom: 0;
+            }
+            10% {
+                left: 15%;
+                bottom: 180px;
+            } 
+            20% {
+                left: 25%;
+                bottom: 0;
+            }
+             30% {
+                left: 40%;
+                bottom: 180px;
+            }
+            40% {
+                left: 50%;
+                bottom: 0;
+            }
+            50% {
+                left: 60%;
+                bottom: 180px;
+            }
+            60% {
+                left: 70%;
+                bottom: 0;
+            }
+            70% {
+                left: 78%;
+                bottom: 180px;
+            }
+             80% {
+                left: 85%;
+                bottom: 0;
+            }
+            100% {
+                left: 1079px;
+                /* left: calc(100% - 121px); */
+                bottom: 0;
+
+                
+            } 
+        } 
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+    <div class="box"></div>
+    </div>
+</body>
+
+</html>
