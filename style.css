@@ -10,3 +10,44 @@ h2{
 .red{
     color: rgb(220, 91, 91);
 }
+
+
+
+h1{
+color: black;
+background-color: bisque;
+
+}
+
+
+.red{
+color: red;
+}
+.bg-yellow{
+    background-color: yellow;
+}
+#firstdiv{
+    background-color: coral; 
+}
+ 
+
+p{
+    background-color: rgb(235, 176, 176);
+    color: black ;
+}
+a{
+    background-color: rgb(186, 144, 225);
+}
+td{
+    border: 2px solid black;
+}
+body{
+
+
+ background-color: rgb(103, 162, 202);
+}
+.blue{
+   
+    color: black;
+}
+   
