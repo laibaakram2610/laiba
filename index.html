@@ -2,11 +2,1810 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Laiba</title>
-    <!-- <link rel="stylesheet" href="style.css"> -->
-    <style>body{
+
+    <title>Laiba Akram | Portfolio</title>
+
+
+    <style>
+
+
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap');
+
+
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+
+            font-family: 'Poppins', sans-serif;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #fff0f5,
+                    #fce4ec,
+                    #f3e5f5,
+                    #ede7f6
+                );
+
+            min-height: 100vh;
+
+            color: #3d2b3d;
+
+            overflow-x: hidden;
+
+        }
+
+
+        /* =========================================
+           FLOATING BACKGROUND BLOBS
+        ========================================= */
+
+        .blob {
+
+            position: fixed;
+
+            width: 350px;
+            height: 350px;
+
+            border-radius: 50%;
+
+            filter: blur(90px);
+
+            opacity: 0.35;
+
+            z-index: -1;
+
+            animation:
+                blobMove 12s infinite alternate ease-in-out;
+
+        }
+
+
+        .blob1 {
+
+            background-color: #f7a8c4;
+
+            top: 100px;
+            left: -150px;
+
+        }
+
+
+        .blob2 {
+
+            background-color: #c8a2f5;
+
+            bottom: 50px;
+            right: -150px;
+
+            animation-delay: 2s;
+
+        }
+
+
+        .blob3 {
+
+            background-color: #ffd6a5;
+
+            top: 45%;
+            left: 45%;
+
+            animation-delay: 4s;
+
+        }
+
+
+        @keyframes blobMove {
+
+            from {
+
+                transform:
+                    translate(0, 0)
+                    scale(1);
+
+            }
+
+
+            to {
+
+                transform:
+                    translate(120px, -80px)
+                    scale(1.25);
+
+            }
+
+        }
+
+
+
+        /* =========================================
+           NAVBAR
+        ========================================= */
+
+        nav {
+
+            width: 100%;
+
+            padding: 20px 8%;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            background-color:
+                rgba(255, 255, 255, 0.72);
+
+            backdrop-filter:
+                blur(15px);
+
+            position: sticky;
+
+            top: 0;
+
+            z-index: 100;
+
+            animation:
+                navSlide 1s ease;
+
+            border-bottom:
+                1px solid rgba(255, 255, 255, 0.6);
+
+        }
+
+
+        @keyframes navSlide {
+
+            from {
+
+                opacity: 0;
+
+                transform:
+                    translateY(-50px);
+
+            }
+
+
+            to {
+
+                opacity: 1;
+
+                transform:
+                    translateY(0);
+
+            }
+
+        }
+
+
+        .logo {
+
+            font-size: 25px;
+
+            font-weight: 700;
+
+            color: #a13d6d;
+
+            transition: 0.3s;
+
+        }
+
+
+        .logo:hover {
+
+            transform:
+                scale(1.05);
+
+        }
+
+
+        .nav-links {
+
+            display: flex;
+
+            gap: 25px;
+
+        }
+
+
+        .nav-links a {
+
+            text-decoration: none;
+
+            color: #5c3b52;
+
+            font-weight: 500;
+
+            position: relative;
+
+            transition: 0.3s;
+
+        }
+
+
+        .nav-links a:hover {
+
+            color: #d94f87;
+
+        }
+
+
+        .nav-links a::after {
+
+            content: "";
+
+            position: absolute;
+
+            width: 0;
+
+            height: 2px;
+
+            background-color: #d94f87;
+
+            left: 0;
+
+            bottom: -6px;
+
+            transition: 0.3s;
+
+        }
+
+
+        .nav-links a:hover::after {
+
+            width: 100%;
+
+        }
+
+
+
+        /* =========================================
+           MAIN CONTAINER
+        ========================================= */
+
+        .container {
+
+            width: 85%;
+
+            max-width: 1200px;
+
+            margin: auto;
+
+            padding: 70px 0;
+
+        }
+
+
+
+        /* =========================================
+           HERO SECTION
+        ========================================= */
+
+        .hero {
+
+            min-height: 500px;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            text-align: center;
+
+            background:
+                rgba(255, 255, 255, 0.62);
+
+            border-radius: 30px;
+
+            padding: 60px 30px;
+
+            box-shadow:
+                0 15px 50px
+                rgba(170, 80, 130, 0.15);
+
+            border:
+                1px solid
+                rgba(255, 255, 255, 0.8);
+
+            position: relative;
+
+            overflow: hidden;
+
+            animation:
+                heroAppear
+                1.2s
+                cubic-bezier(0.16, 1, 0.3, 1);
+
+        }
+
+
+        /* CINEMATIC LIGHT */
+
+        .hero::before {
+
+            content: "";
+
+            position: absolute;
+
+            width: 300px;
+            height: 300px;
+
+            border-radius: 50%;
+
+            background:
+                radial-gradient(
+                    circle,
+                    rgba(255, 150, 200, 0.35),
+                    transparent 70%
+                );
+
+            top: -100px;
+            left: -100px;
+
+            animation:
+                cinematicLight 8s infinite alternate ease-in-out;
+
+        }
+
+
+        .hero::after {
+
+            content: "";
+
+            position: absolute;
+
+            width: 250px;
+            height: 250px;
+
+            border-radius: 50%;
+
+            background:
+                radial-gradient(
+                    circle,
+                    rgba(190, 140, 255, 0.25),
+                    transparent 70%
+                );
+
+            bottom: -100px;
+            right: -100px;
+
+            animation:
+                cinematicLight 10s infinite alternate-reverse ease-in-out;
+
+        }
+
+
+        .hero > div {
+
+            position: relative;
+
+            z-index: 2;
+
+        }
+
+
+        @keyframes cinematicLight {
+
+            from {
+
+                transform:
+                    translate(0, 0)
+                    scale(1);
+
+            }
+
+
+            to {
+
+                transform:
+                    translate(150px, 100px)
+                    scale(1.4);
+
+            }
+
+        }
+
+
+        @keyframes heroAppear {
+
+            from {
+
+                opacity: 0;
+
+                transform:
+                    translateY(70px)
+                    scale(0.97);
+
+            }
+
+
+            to {
+
+                opacity: 1;
+
+                transform:
+                    translateY(0)
+                    scale(1);
+
+            }
+
+        }
+
+
+
+        /* =========================================
+           SMALL TEXT
+        ========================================= */
+
+        .small-text {
+
+            color: #c64f82;
+
+            font-weight: 600;
+
+            letter-spacing: 3px;
+
+            margin-bottom: 15px;
+
+            animation:
+                floatingText
+                3s
+                infinite
+                ease-in-out;
+
+        }
+
+
+        @keyframes floatingText {
+
+            0%,
+            100% {
+
+                transform:
+                    translateY(0);
+
+            }
+
+
+            50% {
+
+                transform:
+                    translateY(-8px);
+
+            }
+
+        }
+
+
+
+        /* =========================================
+           CINEMATIC NAME
+        ========================================= */
+
+        .hero h1 {
+
+            font-family:
+                'Playfair Display',
+                serif;
+
+            font-size: 65px;
+
+            color: #7b244d;
+
+            margin-bottom: 20px;
+
+            animation:
+                heroName
+                1.5s
+                cubic-bezier(0.16, 1, 0.3, 1);
+
+        }
+
+
+        @keyframes heroName {
+
+            0% {
+
+                opacity: 0;
+
+                transform:
+                    translateY(70px);
+
+                letter-spacing:
+                    15px;
+
+            }
+
+
+            100% {
+
+                opacity: 1;
+
+                transform:
+                    translateY(0);
+
+                letter-spacing:
+                    normal;
+
+            }
+
+        }
+
+
+        .hero h1 span {
+
+            color: #e26a9b;
+
+            text-shadow:
+                0 0 20px
+                rgba(226, 106, 155, 0.35);
+
+        }
+
+
+        .hero p {
+
+            max-width: 750px;
+
+            margin: auto;
+
+            line-height: 1.8;
+
+            font-size: 17px;
+
+            color: #604354;
+
+            animation:
+                paragraphAppear
+                1.5s
+                ease;
+
+        }
+
+
+        @keyframes paragraphAppear {
+
+            from {
+
+                opacity: 0;
+
+                transform:
+                    translateY(30px);
+
+            }
+
+
+            to {
+
+                opacity: 1;
+
+                transform:
+                    translateY(0);
+
+            }
+
+        }
+
+
+
+        /* =========================================
+           BUTTONS
+        ========================================= */
+
+        .buttons {
+
+            margin-top: 30px;
+
+        }
+
+
+        .btn {
+
+            display: inline-block;
+
+            padding: 13px 25px;
+
+            margin: 8px;
+
+            text-decoration: none;
+
+            border-radius: 30px;
+
+            font-weight: 600;
+
+            transition:
+                transform 0.25s ease,
+                box-shadow 0.25s ease;
+
+            will-change:
+                transform;
+
+        }
+
+
+        .primary-btn {
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #d94f87,
+                    #9c4dcc
+                );
+
+            color: white;
+
+            box-shadow:
+                0 5px 20px
+                rgba(200, 70, 130, 0.3);
+
+            animation:
+                buttonPulse
+                2s
+                infinite;
+
+        }
+
+
+        @keyframes buttonPulse {
+
+            0%,
+            100% {
+
+                box-shadow:
+                    0 5px 20px
+                    rgba(200, 70, 130, 0.3);
+
+            }
+
+
+            50% {
+
+                box-shadow:
+                    0 10px 35px
+                    rgba(200, 70, 130, 0.6);
+
+            }
+
+        }
+
+
+        .secondary-btn {
+
+            border:
+                2px solid #d94f87;
+
+            color: #c13f75;
+
+            background-color: white;
+
+        }
+
+.secondary-btn:hover {
+
+    background-color: #d94f87;
+
+    color: white;
+
+    transform: translateY(-4px);
+
+}
+
+    
+
+        .section-title {
+
+            text-align: center;
+
+            margin-top: 90px;
+
+            margin-bottom: 40px;
+
+            font-family:
+                'Playfair Display',
+                serif;
+
+            font-size: 40px;
+
+            color: #7b244d;
+
+        }
+
+
+        .section-title span {
+
+            color: #df6494;
+
+        }
+
+
+
+        .course-container {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(
+                    auto-fit,
+                    minmax(220px, 1fr)
+                );
+
+            gap: 20px;
+
+        }
+
+
+        .course-card {
+
+            background:
+                rgba(255, 255, 255, 0.75);
+
+            padding: 30px;
+
+            border-radius: 22px;
+
+            text-align: center;
+
+            box-shadow:
+                0 8px 25px
+                rgba(170, 80, 130, 0.12);
+
+            border:
+                1px solid
+                rgba(255, 255, 255, 0.9);
+
+            transition:
+                transform 0.2s ease,
+                box-shadow 0.2s ease;
+
+            transform-style:
+                preserve-3d;
+
+            will-change:
+                transform;
+
+            cursor: default;
+
+        }
+
+
+        .course-card:hover {
+
+            box-shadow:
+                0 20px 40px
+                rgba(170, 80, 130, 0.22);
+
+        }
+
+
+        .emoji {
+
+            font-size: 40px;
+
+            transition:
+                transform 0.3s ease;
+
+            transform:
+                translateZ(40px);
+
+        }
+
+
+        .course-card h3 {
+
+            color: #a13d6d;
+
+            margin-top: 15px;
+
+            transform:
+                translateZ(30px);
+
+        }
+
+
+
+        .project-container {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(
+                    auto-fit,
+                    minmax(230px, 1fr)
+                );
+
+            gap: 20px;
+
+        }
+
+
+        .project-card {
+
+            background: white;
+
+            padding: 30px;
+
+            border-radius: 22px;
+
+            box-shadow:
+                0 8px 25px
+                rgba(100, 50, 90, 0.1);
+
+            text-align: center;
+
+            position: relative;
+
+            overflow: hidden;
+
+            transition:
+                transform 0.2s ease,
+                box-shadow 0.2s ease;
+
+            transform-style:
+                preserve-3d;
+
+            will-change:
+                transform;
+
+        }
+
+
+        .project-card:hover {
+
+            box-shadow:
+                0 20px 40px
+                rgba(170, 80, 130, 0.2);
+
+        }
+
+
+
+
+        .project-card::before {
+
+            content: "";
+
+            position: absolute;
+
+            top: 0;
+
+            left: -120%;
+
+            width: 60%;
+
+            height: 100%;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    transparent,
+                    rgba(255, 255, 255, 0.85),
+                    transparent
+                );
+
+            transform:
+                skewX(-25deg);
+
+            transition:
+                0.8s ease;
+
+        }
+
+
+        .project-card:hover::before {
+
+            left: 150%;
+
+        }
+
+
+        .project-card h3 {
+
+            color: #91385f;
+
+            margin-bottom: 15px;
+
+            position: relative;
+
+            z-index: 2;
+
+            transform:
+                translateZ(30px);
+
+        }
+
+
+        .project-card a {
+
+            display: inline-block;
+
+            text-decoration: none;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #f27ca7,
+                    #b85bd6
+                );
+
+            color: white;
+
+            padding: 10px 20px;
+
+            border-radius: 25px;
+
+            font-size: 14px;
+
+            position: relative;
+
+            z-index: 2;
+
+            transition:
+                transform 0.3s ease;
+
+            transform:
+                translateZ(35px);
+
+        }
+
+
+
+        .contact-box {
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #7b244d,
+                    #a64d79
+                );
+
+            padding: 55px;
+
+            border-radius: 30px;
+
+            text-align: center;
+
+            color: white;
+
+            margin-top: 90px;
+
+            box-shadow:
+                0 15px 40px
+                rgba(120, 40, 80, 0.25);
+
+            transition:
+                transform 0.3s ease;
+
+        }
+
+
+        .contact-box:hover {
+
+            transform:
+                translateY(-5px);
+
+        }
+
+
+        .contact-box h2 {
+
+            font-size: 34px;
+
+            margin-bottom: 15px;
+
+        }
+
+
+        .contact-box p {
+
+            margin-bottom: 25px;
+
+        }
+
+
+        .contact-box a {
+
+            display: inline-block;
+
+            background: white;
+
+            color: #a13d6d;
+
+            padding: 12px 25px;
+
+            border-radius: 30px;
+
+            text-decoration: none;
+
+            font-weight: 600;
+
+            margin: 5px;
+
+            transition:
+                transform 0.25s ease;
+
+        }
+.contact-box a {
+    display: inline-block;
+    background: white;
+    color: #a13d6d;
+    padding: 12px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    margin: 5px;
+
+    position: relative;
+    overflow: hidden;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        color 0.3s ease;
+}
+
+.contact-box a::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -100%;
+
+    width: 100%;
+    height: 100%;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,0.5),
+        transparent
+    );
+
+    transition: left 0.5s ease;
+}
+
+.contact-box a:hover {
+
+    transform:
+        translateY(-7px)
+        scale(1.06);
+
+    color: white;
+
+    background:
+        linear-gradient(
+            135deg,
+            #d94f87,
+            #9c4dcc
+        );
+
+    box-shadow:
+        0 12px 30px
+        rgba(217, 79, 135, 0.5);
+}
+
+.contact-box a:hover::before {
+    left: 100%;
+}
+
+        footer {
+
+            text-align: center;
+
+            padding: 30px;
+
+            color: #795466;
+
+        }
+
+
+        .reveal {
+
+            opacity: 0;
+
+            transform:
+                translateY(60px);
+
+            transition:
+                opacity 0.8s ease,
+                transform 0.8s ease;
+
+        }
+
+
+        .reveal.active {
+
+            opacity: 1;
+
+            transform:
+                translateY(0);
+
+        }
+
+        @media (max-width: 700px) {
+
+            nav {
+
+                flex-direction: column;
+
+                gap: 15px;
+
+            }
+
+
+            .nav-links {
+
+                gap: 15px;
+
+            }
+
+
+            .hero h1 {
+
+                font-size: 42px;
+
+            }
+
+
+            .container {
+
+                width: 90%;
+
+            }
+
+
+            .contact-box {
+
+                padding: 35px 20px;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+
+<body>
+
+
+
+    <div class="blob blob1"></div>
+
+    <div class="blob blob2"></div>
+
+    <div class="blob blob3"></div>
+
+
+
+
+    <nav>
+
+        <div class="logo">
+
+            Laiba Akram ✨
+
+        </div>
+
+
+        <div class="nav-links">
+
+            <a href="#about">About</a>
+
+            <a href="#courses">Courses</a>
+
+            <a href="#projects">Projects</a>
+
+            <a href="#contact">Contact</a>
+
+        </div>
+
+    </nav>
+
+
+
+
+    <div class="container">
+
+
+
+        <div class="hero" id="about">
+
+            <div>
+
+                <p class="small-text">
+
+                    HELLO, I'M
+
+                </p>
+
+
+                <h1>
+
+                    Laiba <span>Akram</span>
+
+                </h1>
+
+
+                <p>
+
+                    I am a third-year Computer Science student at the
+                    University of Engineering and Technology, Lahore.
+
+                    I am passionate about technology and currently learning
+                    HTML, CSS, and JavaScript. I love exploring new things,
+                    creating projects, and improving my programming skills.
+
+                </p>
+
+
+                <div class="buttons">
+
+
+                    <a
+                        class="btn primary-btn magnetic"
+                        target="_blank"
+                        href="https://gitlab.com/laibaakram2710-group/laibaakram2710-project.git">
+
+                        View My GitLab 💻
+
+                    </a>
+
+
+                    <a class="btn secondary-btn"
+                        target="_blank"
+                        href="https://www.linkedin.com/in/laiba-akram-6b44883a1/">
+
+                        LinkedIn Profile 💼
+
+                    </a>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+
+        <h2 class="section-title reveal" id="courses">
+
+            My <span>Courses</span>
+
+        </h2>
+
+
+        <div class="course-container">
+
+
+            <div class="course-card reveal">
+
+                <div class="emoji">💻</div>
+
+                <h3>
+                    Programming Fundamentals
+                </h3>
+
+            </div>
+
+
+            <div class="course-card reveal">
+
+                <div class="emoji">⚛️</div>
+
+                <h3>
+                    Applied Physics
+                </h3>
+
+            </div>
+
+
+            <div class="course-card reveal">
+
+                <div class="emoji">🔌</div>
+
+                <h3>
+                    Digital Logic Design
+                </h3>
+
+            </div>
+
+
+            <div class="course-card reveal">
+
+                <div class="emoji">📐</div>
+
+                <h3>
+                    Calculus-I
+                </h3>
+
+            </div>
+
+
+            <div class="course-card reveal">
+
+                <div class="emoji">☕</div>
+
+                <h3>
+                    Object Oriented Programming
+                </h3>
+
+            </div>
+
+
+            <div class="course-card reveal">
+
+                <div class="emoji">🗄️</div>
+
+                <h3>
+                    Database Systems
+                </h3>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- PROJECTS -->
+
+        <h2 class="section-title reveal" id="projects">
+
+            My <span>Projects & Quizzes</span>
+
+        </h2>
+
+
+        <div class="project-container">
+
+
+            <div class="project-card reveal">
+
+                <h3>Quiz 1</h3>
+
+                <a target="_blank" href="quiz.html">
+                    Open Project →
+                </a>
+
+            </div>
+
+
+            <div class="project-card reveal">
+
+                <h3>Quiz 2</h3>
+
+                <a target="_blank" href="quiz2.html">
+                    Open Project →
+                </a>
+
+            </div>
+
+
+            <div class="project-card reveal">
+
+                <h3>Quiz 3</h3>
+
+                <a target="_blank" href="quiz3.html">
+                    Open Project →
+                </a>
+
+            </div>
+
+
+            <div class="project-card reveal">
+
+                <h3>Quiz 4</h3>
+
+                <a target="_blank" href="quiz4.html">
+                    Open Project →
+                </a>
+
+            </div>
+
+
+            <div class="project-card reveal">
+
+                <h3>Quiz 5</h3>
+
+                <a target="_blank" href="quiz5.html">
+                    Open Project →
+                </a>
+
+            </div>
+
+
+            <div class="project-card reveal">
+
+                <h3>Quiz 6</h3>
+
+                <a target="_blank" href="quiz6.html">
+                    Open Project →
+                </a>
+
+            </div>
+
+
+            <div class="project-card reveal">
+
+                <h3>Quiz 7</h3>
+
+                <a target="_blank" href="quiz7.html">
+                    Open Project →
+                </a>
+
+            </div>
+
+
+            <div class="project-card reveal">
+
+                <h3>Quiz 8</h3>
+
+                <a target="_blank" href="quiz8.html">
+                    Open Project →
+                </a>
+
+            </div>
+
+
+            <div class="project-card reveal">
+
+                <h3>Netflix Clone 🎬</h3>
+
+                <a
+                    target="_blank"
+                    href="NetflixClone/index.html">
+
+                    Open Project →
+
+                </a>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- CONTACT -->
+
+        <div
+            class="contact-box reveal"
+            id="contact">
+
+
+            <h2>
+
+                Let's Connect! 💕
+
+            </h2>
+
+
+            <p>
+
+                Feel free to connect with me and explore my work.
+
+            </p>
+
+
+            <a
+                class="magnetic"
+                target="_blank"
+                href="https://gitlab.com/laibaakram2710-group/laibaakram2710-project.git">
+
+                GitLab
+
+            </a>
+
+
+            <a
+                class="magnetic"
+                target="_blank"
+                href="https://www.linkedin.com/in/laiba-akram-6b44883a1/">
+
+                LinkedIn
+
+            </a>
+
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        © 2026 Laiba Akram | Made with 💕 and lots of CSS
+
+    </footer>
+
+
+
+    <!-- JAVASCRIPT -->
+
+    <script>
+
+
+        /* =====================================
+           SCROLL REVEAL
+        ===================================== */
+
+        const revealElements =
+            document.querySelectorAll(".reveal");
+
+
+        const observer =
+            new IntersectionObserver(
+
+                function(entries) {
+
+                    entries.forEach(
+
+                        function(entry) {
+
+                            if (entry.isIntersecting) {
+
+                                entry.target.classList.add("active");
+
+                            }
+
+                        }
+
+                    );
+
+                },
+
+                {
+                    threshold: 0.12
+                }
+
+            );
+
+
+        revealElements.forEach(
+
+            function(element) {
+
+                observer.observe(element);
+
+            }
+
+        );
+
+
+
+        /* =====================================
+           REAL 3D CARD TILT
+        ===================================== */
+
+        const cards =
+            document.querySelectorAll(
+                ".course-card, .project-card"
+            );
+
+
+        cards.forEach(
+
+            function(card) {
+
+
+                card.addEventListener(
+
+                    "mousemove",
+
+                    function(event) {
+
+
+                        /* Card position */
+
+                        const rect =
+                            card.getBoundingClientRect();
+
+
+                        const x =
+                            event.clientX - rect.left;
+
+
+                        const y =
+                            event.clientY - rect.top;
+
+
+                        /* Center of card */
+
+                        const centerX =
+                            rect.width / 2;
+
+
+                        const centerY =
+                            rect.height / 2;
+
+
+                        /* Calculate rotation */
+
+                        const rotateX =
+                            ((y - centerY) / centerY) * -8;
+
+
+                        const rotateY =
+                            ((x - centerX) / centerX) * 8;
+
+
+                        /* Apply REAL 3D transform */
+
+                        card.style.transform =
+                            "perspective(1000px) " +
+
+                            "rotateX(" +
+                            rotateX +
+                            "deg) " +
+
+                            "rotateY(" +
+                            rotateY +
+                            "deg) " +
+
+                            "translateY(-8px) " +
+
+                            "scale(1.03)";
+
+                    }
+
+                );
+
+
+                /* Reset card */
+
+                card.addEventListener(
+
+                    "mouseleave",
+
+                    function() {
+
+                        card.style.transform =
+                            "perspective(1000px) " +
+                            "rotateX(0deg) " +
+                            "rotateY(0deg) " +
+                            "translateY(0px) " +
+                            "scale(1)";
+
+                    }
+
+                );
+
+
+            }
+
+        );
+
+        const buttons =
+            document.querySelectorAll(
+                ".magnetic, .project-card a"
+            );
+
+
+        buttons.forEach(
+
+            function(button) {
+
+
+                button.addEventListener(
+
+                    "mousemove",
+
+                    function(event) {
+
+
+                        const rect =
+                            button.getBoundingClientRect();
+
+
+                        const x =
+                            event.clientX - rect.left;
+
+
+                        const y =
+                            event.clientY - rect.top;
+
+
+                        const centerX =
+                            rect.width / 2;
+
+
+                        const centerY =
+                            rect.height / 2;
+
+
+                        /* Magnetic movement */
+
+                        const moveX =
+                            (x - centerX) * 0.22;
+
+
+                        const moveY =
+                            (y - centerY) * 0.22;
+
+
+                        button.style.transform =
+                            "translate(" +
+                            moveX +
+                            "px, " +
+                            moveY +
+                            "px) scale(1.04)";
+
+                    }
+
+                );
+
+
+                button.addEventListener(
+
+                    "mouseleave",
+
+                    function() {
+
+                        button.style.transform =
+                            "translate(0px, 0px) scale(1)";
+
+                    }
+
+                );
+
+
+            }
+
+        );
+
+
+    </script>
+
+
+</body>
+
+</html>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+<!--  
+ 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laiba</title> 
+
+      link rel="stylesheet" href="style.css">   
+     <style>body{
     background-color: bisque;
 }
 h1{
@@ -56,8 +1855,9 @@ h2{
         <div><a target="_blank" href="quiz7.html"> Quiz 7  </a></div>
         <div><a target="_blank" href="quiz8.html"> Quiz 8  </a></div>
         <div><a target="_blank" href="NetflixClone/index.html"> NetflixClone  </a></div>
-
+        <div><a target="_blank" href="quiz9.js"> Quiz 9  </a></div>
+        <div><a target="_blank" href="quiz10.js"> Quiz 10 </a></div>
 
     </div>
 </body>
-</html>
+</html>   -->
