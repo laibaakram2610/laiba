@@ -1264,9 +1264,9 @@
                     <a
                         class="btn primary-btn magnetic"
                         target="_blank"
-                        href="https://gitlab.com/laibaakram2710-group/laibaakram2710-project.git">
+                        href="https://github.com/laibaakram2610">
 
-                        View My GitLab 💻
+                        View My GitHub 💻
 
                     </a>
 
@@ -1483,7 +1483,19 @@
 
             </div>
 
+      <div class="project-card reveal">
 
+                <h3> Coffee Website ☕</h3>
+
+                <a
+                    target="_blank"
+                    href="project-coffee/project-coffee/index.html">
+
+                    Open Project →
+
+                </a>
+
+            </div>
         </div>
 
 
@@ -1512,9 +1524,9 @@
             <a
                 class="magnetic"
                 target="_blank"
-                href="https://gitlab.com/laibaakram2710-group/laibaakram2710-project.git">
+                href="https://github.com/laibaakram2610">
 
-                GitLab
+                GitHub
 
             </a>
 
@@ -1534,10 +1546,6 @@
 
     </div>
 
-
-
-    <!-- FOOTER -->
-
     <footer>
 
         © 2026 Laiba Akram | Made with 💕 and lots of CSS
@@ -1546,14 +1554,8 @@
 
 
 
-    <!-- JAVASCRIPT -->
+        <script>
 
-    <script>
-
-
-        /* =====================================
-           SCROLL REVEAL
-        ===================================== */
 
         const revealElements =
             document.querySelectorAll(".reveal");
@@ -1599,9 +1601,6 @@
 
 
 
-        /* =====================================
-           REAL 3D CARD TILT
-        ===================================== */
 
         const cards =
             document.querySelectorAll(
@@ -1621,7 +1620,6 @@
                     function(event) {
 
 
-                        /* Card position */
 
                         const rect =
                             card.getBoundingClientRect();
@@ -1635,7 +1633,7 @@
                             event.clientY - rect.top;
 
 
-                        /* Center of card */
+         
 
                         const centerX =
                             rect.width / 2;
@@ -1645,7 +1643,6 @@
                             rect.height / 2;
 
 
-                        /* Calculate rotation */
 
                         const rotateX =
                             ((y - centerY) / centerY) * -8;
@@ -1655,7 +1652,7 @@
                             ((x - centerX) / centerX) * 8;
 
 
-                        /* Apply REAL 3D transform */
+              
 
                         card.style.transform =
                             "perspective(1000px) " +
@@ -1677,9 +1674,7 @@
                 );
 
 
-                /* Reset card */
-
-                card.addEventListener(
+                  card.addEventListener(
 
                     "mouseleave",
 

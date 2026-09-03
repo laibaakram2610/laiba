@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Café Laiba — Small-batch roasts, brewed slow</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,400&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="grain"></div>
+<div class="scroll-progress"><div class="scroll-progress__bar" id="scrollBar"></div></div>
+<div class="cursor-dot" id="cursorDot"></div>
+
+<!-- ================= NAV ================= -->
+<header class="nav" id="siteNav">
+  <div class="nav__inner">
+    <a href="#top" class="nav__brand">Café Laiba</a>
+    <nav class="nav__links" id="navLinks">
+      <a href="#about">Story</a>
+      <a href="#menu">Menu</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#visit">Visit</a>
+    </nav>
+    <button class="nav__cta" id="navCta">Order ahead</button>
+    <button class="nav__burger" id="navBurger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="top">
+  <div class="hero__beans" id="beanField"></div>
+  <div class="hero__inner">
+    <p class="hero__eyebrow" data-reveal>Roasted in small batches, every Tuesday</p>
+    <h1 class="hero__title">
+      <span class="line" data-line>Coffee that</span>
+      <span class="line" data-line>earns its <em>warmth</em></span>
+    </h1>
+    <div class="hero__row">
+      <p class="hero__desc" data-reveal>
+        We source single-origin beans from three family farms, roast them a few
+        pounds at a time, and pour every cup by hand. No syrups pretending to be flavor.
+      </p>
+      <div class="hero__actions" data-reveal>
+        <a href="#menu" class="btn btn--primary">See the menu</a>
+        <a href="#visit" class="btn btn--ghost">Find the shop</a>
+      </div>
+    </div>
+  </div>
+  <div class="hero__cup" id="heroCup">
+    <img src="images/coffee-hero-section.png" alt="A splash of coffee poured into a white cup surrounded by roasted beans">
+  </div>
+  <div class="hero__scroll-cue">
+    <span></span>
+    <p>Scroll</p>
+  </div>
+</section>
+
+<!-- ================= TICKER ================= -->
+<section class="ticker">
+  <div class="ticker__track" id="tickerTrack">
+    <span>Espresso</span><span>·</span><span>Cold Brew</span><span>·</span>
+    <span>Flat White</span><span>·</span><span>Pour Over</span><span>·</span>
+    <span>Cortado</span><span>·</span><span>Mocha</span><span>·</span>
+    <span>Affogato</span><span>·</span>
+  </div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section class="about" id="about">
+  <div class="about__media" data-reveal>
+    <img src="images/about-image.jpg" alt="Barista preparing coffee behind the counter">
+    <div class="about__stat">
+      <span class="counter" data-count="14">0</span>
+      <p>years pulling shots on the same corner</p>
+    </div>
+  </div>
+  <div class="about__copy">
+    <p class="section-eyebrow" data-reveal>Our story</p>
+    <h2 data-reveal>We started in a garage with one roaster and too much opinion about beans.</h2>
+    <p data-reveal>
+      Café Laiba opened in 2011 as a weekend hobby that got out of hand. Today the roaster
+      is bigger, but the habit hasn't changed — we still cup every new lot before it
+      goes anywhere near a customer, and we still tell you when a batch didn't make the cut.
+    </p>
+    <div class="about__figures">
+      <div class="figure" data-reveal>
+        <span class="counter" data-count="3">0</span>
+        <p>partner farms we've visited in person</p>
+      </div>
+      <div class="figure" data-reveal>
+        <span class="counter" data-count="42000" data-suffix="+">0</span>
+        <p>cups poured last year alone</p>
+      </div>
+      <div class="figure" data-reveal>
+        <span class="counter" data-count="6">0</span>
+        <p>roast profiles in rotation</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= MENU ================= -->
+<section class="menu" id="menu">
+  <p class="section-eyebrow" data-reveal>On the counter</p>
+  <h2 class="section-title" data-reveal>Pick your order</h2>
+
+  <div class="menu__tabs" id="menuTabs" data-reveal>
+    <button class="menu__tab is-active" data-cat="hot">Hot beverages</button>
+    <button class="menu__tab" data-cat="cold">Cold beverages</button>
+    <button class="menu__tab" data-cat="dessert">Desserts</button>
+    <button class="menu__tab" data-cat="combo">Special combos</button>
+    <button class="menu__tab" data-cat="refresh">Refreshments</button>
+    <button class="menu__tab" data-cat="food">Something savory</button>
+  </div>
+
+  <div class="menu__stage" id="menuStage">
+
+    <article class="menu__panel is-active" data-panel="hot">
+      <img src="images/hot-beverages.png" alt="Hot coffee beverages">
+      <div class="menu__panel-copy">
+        <h3>Hot beverages</h3>
+        <p>Espresso-forward drinks pulled to order, from a straight shot to a slow pour over.</p>
+        <ul class="menu__list">
+          <li><span>Espresso</span><span>245</span></li>
+          <li><span>Cortado</span><span>340</span></li>
+          <li><span>Flat White</span><span>420</span></li>
+          <li><span>Pour Over, single origin</span><span>460</span></li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="menu__panel" data-panel="cold">
+      <img src="images/cold-beverages.png" alt="Cold coffee beverages">
+      <div class="menu__panel-copy">
+        <h3>Cold beverages</h3>
+        <p>Slow-steeped and iced, built for the long stretch of a warm afternoon.</p>
+        <ul class="menu__list">
+          <li><span>Cold Brew</span><span>380</span></li>
+          <li><span>Iced Latte</span><span>420</span></li>
+          <li><span>Nitro Cold Brew</span><span>460</span></li>
+          <li><span>Vietnamese Iced Coffee</span><span>440</span></li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="menu__panel" data-panel="dessert">
+      <img src="images/cake.png" alt="Assorted desserts">
+      <div class="menu__panel-copy">
+        <h3>Desserts</h3>
+        <p>Baked in-house every morning, small batch, usually gone by four.</p>
+        <ul class="menu__list">
+          <li><span>Basque Cheesecake</span><span>390</span></li>
+          <li><span>Cardamom Bun</span><span>250</span></li>
+          <li><span>Tiramisu Cup</span><span>410</span></li>
+          <li><span>Dark Chocolate Tart</span><span>380</span></li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="menu__panel" data-panel="combo">
+      <img src="images/special-combo.png" alt="Special combo meal">
+      <div class="menu__panel-copy">
+        <h3>Special combos</h3>
+        <p>Coffee paired with something to eat, priced kinder than ordering apart.</p>
+        <ul class="menu__list">
+          <li><span>Espresso + Cardamom Bun</span><span>420</span></li>
+          <li><span>Cold Brew + Tart Slice</span><span>620</span></li>
+          <li><span>Latte + Breakfast Sandwich</span><span>690</span></li>
+          <li><span>Pour Over + Cheesecake</span><span>720</span></li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="menu__panel" data-panel="refresh">
+      <img src="images/glass.png" alt="Refreshing drinks">
+      <div class="menu__panel-copy">
+        <h3>Refreshments</h3>
+        <p>For the days that call for something other than caffeine.</p>
+        <ul class="menu__list">
+          <li><span>Sparkling Citrus</span><span>320</span></li>
+          <li><span>Hibiscus Iced Tea</span><span>340</span></li>
+          <li><span>Mint Lemonade</span><span>310</span></li>
+          <li><span>Cucumber Cooler</span><span>330</span></li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="menu__panel" data-panel="food">
+      <img src="images/burger-frenchfries.png" alt="Burger and french fries">
+      <div class="menu__panel-copy">
+        <h3>Something savory</h3>
+        <p>Because not every visit is about coffee.</p>
+        <ul class="menu__list">
+          <li><span>House Burger</span><span>650</span></li>
+          <li><span>French Fries</span><span>280</span></li>
+          <li><span>Grilled Cheese</span><span>420</span></li>
+          <li><span>Loaded Fries</span><span>390</span></li>
+        </ul>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ================= GALLERY ================= -->
+<section class="gallery" id="gallery">
+  <p class="section-eyebrow" data-reveal>Inside Café Laiba</p>
+  <h2 class="section-title" data-reveal>A look around the shop</h2>
+  <div class="gallery__grid" data-reveal>
+    <button class="gallery__item g1" data-full="images/food.jpg"><img src="images/food.jpg" alt="Coffee shop interior"></button>
+    <button class="gallery__item g2" data-full="images/juice2.jpg"><img src="images/juice2.jpg" alt="Latte art close up"></button>
+    <button class="gallery__item g3" data-full="images/croissant.jpg"><img src="images/croissant.jpg" alt="Seating area"></button>
+    <button class="gallery__item g4" data-full="images/gallery-4.jpg"><img src="images/gallery-4.jpg" alt="Roasting beans"></button>
+<button class="gallery__item g5-half" data-full="images/gallery-5.jpg">
+  <img src="images/burger.jpg" alt="Counter and menu board">
+</button>
+
+<button class="gallery__item g5-half" data-full="images/gallery-5-2.jpg">
+  <img src="images/fries2.jpg" alt="Coffee shop food">
+</button>  
+  <button class="gallery__item g6" data-full="images/Coffeee.jpg"><img src="images/Coffeee.jpg" alt="Guests at a table"></button>
+  </div>
+</section>
+
+<div class="lightbox" id="lightbox">
+  <button class="lightbox__close" id="lightboxClose" aria-label="Close">&times;</button>
+  <img id="lightboxImg" src="" alt="Expanded gallery photo">
+</div>
+
+<!-- ================= REVIEWS ================= -->
+<section class="reviews" id="reviews">
+  <p class="section-eyebrow" data-reveal>Word of mouth</p>
+  <h2 class="section-title" data-reveal>What regulars say</h2>
+
+  <div class="reviews__slider" data-reveal>
+    <div class="reviews__track" id="reviewsTrack">
+      <article class="review">
+        <img src="images/user-1.jpg" alt="Amara Osei">
+        <p class="review__quote">Best flat white in the neighborhood, and the staff remembers my order after two visits.</p>
+        <p class="review__name">Amara Osei</p>
+      </article>
+      <article class="review">
+        <img src="images/user-2.jpg" alt="Daniyal Raza">
+        <p class="review__quote">The cardamom bun alone is worth the trip. I come for pastries, stay for the pour over.</p>
+        <p class="review__name">Daniyal Raza</p>
+      </article>
+      <article class="review">
+        <img src="images/user-3.jpg" alt="Sofia Marchetti">
+        <p class="review__quote">Quiet corner tables, good light for working, and coffee that doesn't need three sugars to taste good.</p>
+        <p class="review__name">Sofia Marchetti</p>
+      </article>
+      <article class="review">
+        <img src="images/user-4.jpg" alt="Kwame Boateng">
+        <p class="review__quote">Their cold brew ruined every other cold brew for me. Genuinely can't go back.</p>
+        <p class="review__name">Kwame Boateng</p>
+      </article>
+      <article class="review">
+        <img src="images/user-5.jpg" alt="Leila Haddad">
+        <p class="review__quote">Small shop, huge personality. The combo deals are a steal for a weekday lunch.</p>
+        <p class="review__name">Leila Haddad</p>
+      </article>
+    </div>
+    <div class="reviews__dots" id="reviewsDots"></div>
+  </div>
+</section>
+
+<!-- ================= VISIT / CTA ================= -->
+<section class="visit" id="visit">
+  <div class="visit__inner">
+    <h2 data-reveal>Come sit with us for a while.</h2>
+    <p data-reveal>Open every day from 7am to 8pm. First cup on the house if it's your first visit — just ask.</p>
+    <div class="visit__details" data-reveal>
+      <div>
+        <h4>Address</h4>
+        <p>42 Larkspur Lane, near the old post office</p>
+      </div>
+      <div>
+        <h4>Hours</h4>
+        <p>Mon – Sun, 7:00 AM – 8:00 PM</p>
+      </div>
+      <div>
+        <h4>Reach us</h4>
+        <p>hello@Café Laiba.co</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <p>&copy; 2026Café Laiba Coffee Co. Roasted with patience.</p>
+  <button id="toTop" class="footer__top" aria-label="Back to top">↑</button>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
